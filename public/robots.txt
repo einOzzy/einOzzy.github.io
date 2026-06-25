@@ -1,7 +1,4 @@
-User-agent: Googlebot
-Disallow: /nogooglebot/
 
-User-agent: *
-Allow: /
 
-Sitemap: https://torn-tasty-fox-nf3qyn.teleporthq.site/sitemap.xml
+
+
