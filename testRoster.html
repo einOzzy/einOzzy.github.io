@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Lucent Roster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="testRoster.css">
+</head>
+<body>
+    
+    <div class="roster-header">
+        <h1 class="logo-text">ROSTER</h1>
+
+        <!-- <div class="filter-nav">
+          <span class="active-bg"></span>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="founder">Staff</button>
+            <button class="filter-btn" data-filter="freestyler">Players</button>
+            <button class="filter-btn" data-filter="smm">Content</button>
+            <button class="filter-btn" data-filter="designer">Designers</button>
+            <button class="filter-btn" data-filter="developer">Web</button>
+        </div> -->
+
+        <div class="filter-nav">
+        <span class="active-bg"></span>
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="players">PLAYERS</button>
+            <button class="filter-btn" data-filter="content">CONTENT</button>
+            <button class="filter-btn" data-filter="creatives">CREATIVES</button>
+            <button class="filter-btn" data-filter="management">MANAGEMENT</button>
+            <button class="filter-btn" data-filter="owner">OWNERS</button>
+        </div>
+    </div>
+
+    <div id="rosterContainer" class="roster-grid"></div>
+
+    <div id="playerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <div class="modal-left">
+                <img id="modalImg" src="" alt="Player Profile Picture">
+            </div>
+            
+            <div class="modal-right">
+                <h3 id="modalRole"></h3>
+                <div class="name-flag-container">
+                    <h2 id="modalName"></h2>
+                    <img id="modalFlag" src="" alt="Country Flag" class="player-flag">
+                </div>
+                
+                <p class="team-handle" id="modalHandle"></p>
+                
+                <div class="socials-wrapper">
+                    <span>Socials</span>
+                    <div id="modalSocials" class="socials-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="testRoster.js"></script>
+</body>
+</html>
