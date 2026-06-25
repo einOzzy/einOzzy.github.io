@@ -850,6 +850,7 @@
   padding: 0;
   list-style: none;
   flex-direction: column;
+  gap: 20px;
 }
  
 .navigation-mobile-footer {
@@ -869,6 +870,13 @@
   font-weight: var(--font-weight-heading);
   line-height: 1;
   text-decoration: none;
+  margin: 0 auto;
+  
+  /* NEUE EIGENSCHAFTEN FÜR ZENTRIERUNG */
+  display: flex;
+  align-items: center;     /* Zentriert den Text vertikal */
+  justify-content: center; /* Zentriert den Text horizontal (falls gewünscht) */
+  min-height: 3rem;        /* Optionale Mindesthöhe für Klickfläche */
 }
  
 .navigation-brand:hover {
