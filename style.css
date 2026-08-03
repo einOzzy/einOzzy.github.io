@@ -1731,15 +1731,6 @@ video::-webkit-media-controls-enclosure {
   transform: translateY(-3px);
 }
  
-.tryouts-hero {
-  display: flex;
-  overflow: hidden;
-  position: relative;
-  background: var(--color-surface);
-  min-height: 100vh;
-  align-items: center;
-}
-
 /* Der Container für das YouTube Video */
 .hero-youtube-background {
   position: absolute;
@@ -1771,16 +1762,31 @@ video::-webkit-media-controls-enclosure {
   min-width: 177.77vh;
 } 
 
+/* .tryouts-hero {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  background: var(--color-surface);
+  min-height: 100vh;
+  align-items: center;
+}
+
 .hero-video {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  position: absolute;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 1. Locks down ONLY your hero background video and adds a delayed fade-in */
+  /*pointer-events: none !important;
+  opacity: 1; /* Starts completely invisible */
+  /*animation: fade-in-video 1s ease-in 5s forwards;  Waits 1.5s, then fades in over 1s */
+
+
+  /* Erzwingt das 16:9 Format passend zur Bildschirmgröße */
+  /*width: 100vw;
+  height: 56.25vw; 
+  min-height: 100vh;
+  min-width: 177.77vh;
 }
 
 .hero-video.loaded {
@@ -1788,15 +1794,15 @@ video::-webkit-media-controls-enclosure {
 }
 
 /* Stellt sicher, dass das Overlay über dem Video, aber unter dem Text liegt */
-.tryouts-hero-overlay {
-  position: absolute;
+/*.tryouts-hero-overlay {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Über dem Video (0), unter dem Content (2) */
+  z-index: 2;
+  position: absolute;
     /* background: linear-gradient(90deg, var(--color-surface) 30%, transparent 100%),var(--color-scrim); */
-  background: linear-gradient(90deg, #050b18f6 20%, #050b18ec 30%, #050b189c 60%, transparent 100%),#d5e6f43b;
+  /*background: linear-gradient(90deg, #050b18f6 20%, #050b18ec 30%, #050b189c 60%, transparent 100%),#d5e6f43b;
 }
  
 .hero-container {
@@ -1804,7 +1810,7 @@ video::-webkit-media-controls-enclosure {
   margin: 0 auto;
   padding: var(--spacing-4xl) var(--spacing-xl);
   z-index: 3;
-  position: relative;
+  position: abs;
   max-width: var(--content-max-width);
 }
  
@@ -1833,8 +1839,80 @@ video::-webkit-media-controls-enclosure {
 .hero-actions {
   gap: var(--spacing-md);
   display: flex;
-}
+} */
  
+.tryouts-hero {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  background: var(--color-surface);
+  min-height: 100vh;
+  align-items: center;
+}
+
+.hero-video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.hero-video.loaded {
+    opacity: 1;
+}
+
+.tryouts-hero-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+    /* background: linear-gradient(90deg, var(--color-surface) 30%, transparent 100%),var(--color-scrim); */
+  background: linear-gradient(90deg, #050b18f6 20%, #050b18ec 30%, #050b189c 60%, transparent 100%),#d5e6f43b;
+}
+
+.hero-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--spacing-4xl) var(--spacing-xl);
+  z-index: 3;
+  position: relative;
+  max-width: var(--content-max-width);
+}
+
+.hero-content-block {
+  color: var(--color-surface);
+  max-width: 600px;
+}
+
+.tryouts-hero-title {
+  color: #ffffff;
+  margin-bottom: var(--spacing-lg);
+}
+
+.tryouts-hero-subtitle {
+  color: #ffffff;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.hero-values {
+  gap: var(--spacing-md);
+  display: flex;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.hero-actions {
+  gap: var(--spacing-md);
+  display: flex;
+}
+
 .value-item {
   border: 1px solid var(--color-secondary);
   padding: var(--spacing-sm) var(--spacing-lg);
@@ -2694,7 +2772,8 @@ video::-webkit-media-controls-enclosure {
   padding: var(--spacing-lg);
   position: absolute;
   background: var(--color-scrim);
-  transition: opacity 0.3s ease;
+  transition: fade-in
+ 0.3s ease;
   align-items: flex-end;
 }
  

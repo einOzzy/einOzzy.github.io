@@ -292,40 +292,28 @@
             </style>
           </div>
         </div>
-              <section class="tryouts-hero">
-                <!-- NEUER YOUTUBE HINTERGRUND -->
-                <!-- <div class="hero-youtube-background">
-                  <iframe 
-                    src="https://www.youtube.com/embed/TIc-a3v8b4Y?autoplay=1&mute=1&controls=0&loop=1&playlist=TIc-a3v8b4Y&start=10&playsinline=1&rel=0&disablekb=1&cc_load_policy=3&modestbranding=1&iv_load_policy=3" 
-                    frameborder="0" 
-                    allow="autoplay; encrypted-media" 
-                    allowfullscreen>
-                  </iframe> -->
-                 <!-- ENDE YOUTUBE HINTERGRUND -->
-                    <video
-                      src="content/Altered Reality   Team Lucent Release (compressed v2).mp4"
-                      loop
-                      muted
-                      poster="content/Altered Reality Thumbnail draft.png"
-                      autoplay
-                      playsinline
-                      class="hero-video">
-                  </video>
+        <section class="tryouts-hero">
+         <video
+            src="content/Altered Reality   Team Lucent Release (compressed v2).mp4"
+            loop
+            muted
+            poster="content/Altered Reality Thumbnail draft.png"
+            autoplay
+            playsinline
+            class="hero-video">
+        </video>
 
-                </div>
+            <script>
+            const video = document.querySelector('.hero-video');
 
-                <script>
-                  const video = document.querySelector('.hero-video');
+            video.addEventListener('loadedmetadata', () => {
+                video.currentTime = 9.5; // Start at 5 seconds 6
+            });
 
-                  video.addEventListener('loadedmetadata', () => {
-                      video.currentTime = 9.5; // Start at 5 seconds 6
-                  });
-
-                  video.addEventListener('canplay', () => {
-                      video.classList.add('loaded');
-                  });
-                </script>
-
+            video.addEventListener('canplay', () => {
+                video.classList.add('loaded');
+            });
+            </script>
           <div class="tryouts-hero-overlay"></div>
           <div class="hero-container">
             <div class="hero-content-block">
