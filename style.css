@@ -3741,6 +3741,10 @@ video::-webkit-media-controls-enclosure {
 
 /* 2. The animation keyframes to make the fade happen */
 @keyframes fade-in-video {
+  
+  from {
+    opacity:0;
+  }
   to {
     opacity: 1;
   }
