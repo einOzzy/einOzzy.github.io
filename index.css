@@ -192,3 +192,23 @@
   font-weight: 500;
   line-height: 24px;
 }
+
+/* Der Container gibt die Breite und das Seitenverhältnis vor */
+.responsive-youtube-player {
+  width: 100%; 
+  max-width: 800px; /* Optional: Verhindert, dass das Video auf großen Monitoren riesig wird */
+  aspect-ratio: 16 / 9; /* Zwingt den Container immer in das Standard-Videoformat */
+  margin: 20px auto; /* Zentriert den Player auf der Seite und gibt ihm etwas Abstand */
+  
+  /* Optional für die Optik: */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden; /* Sorgt dafür, dass die runden Ecken auch für das iframe gelten */
+}
+
+/* Das Iframe füllt den Container exakt aus */
+.responsive-youtube-player iframe {
+  width: 100%;
+  height: 100%;
+  display: block; /* Entfernt kleine unsichtbare Abstände unter dem iframe */
+}
