@@ -1760,8 +1760,8 @@ video::-webkit-media-controls-enclosure {
   transform: translate(-50%, -50%);
   /* 1. Locks down ONLY your hero background video and adds a delayed fade-in */
   pointer-events: none !important;
-  opacity: 0; /* Starts completely invisible */
-  animation: fade-in-video 0.5 ease-in 5 forwards; /* Waits 1.5s, then fades in over 1s */
+  opacity: 1; /* Starts completely invisible */
+  /*animation: fade-in-video 1 ease-in 5 forwards;  Waits 1.5s, then fades in over 1s */
 
 
   /* Erzwingt das 16:9 Format passend zur Bildschirmgröße */
