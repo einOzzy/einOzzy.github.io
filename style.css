@@ -2362,9 +2362,9 @@ video::-webkit-media-controls-enclosure {
  
 .player-info {
   padding: var(--spacing-xl);
-   padding-bottom: 10px; 
-   padding-top: 10px;
-   
+  padding-bottom: 10px; 
+  padding-top: 10px;
+  container-type: inline-size;    
 }
  
 .player-rank-badge {
