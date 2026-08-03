@@ -1758,7 +1758,18 @@ video::-webkit-media-controls-enclosure {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
+  /* 1. Locks down ONLY your hero background video and adds a delayed fade-in */
+  pointer-events: none !important;
+  opacity: 0; /* Starts completely invisible */
+  animation: fade-in-video 1s ease-in 1.5s forwards; /* Waits 1.5s, then fades in over 1s */
+
+
+/* 2. The animation keyframes to make the fade happen */
+@keyframes fade-in-video {
+  to {
+    opacity: 1;
+  }
+}
   /* Erzwingt das 16:9 Format passend zur Bildschirmgröße */
   width: 100vw;
   height: 56.25vw; 
@@ -3487,23 +3498,8 @@ video::-webkit-media-controls-enclosure {
   transform: scale(1.02);
 }
  
-.culture-text::before {
-  color: var(--color-primary);
-  content: '"';
-  opacity: 0.3;
-  position: absolute;
-  font-size: 4rem;
-  font-family: var(--font-family-heading);
-}
+
  
-.culture-text::after {
-  color: var(--color-primary);
-  content: '"';
-  opacity: 0.3;
-  position: absolute;
-  font-size: 4rem;
-  font-family: var(--font-family-heading);
-}
  
 .tryout-modal::backdrop {
   background: rgba(0, 0, 0, 0.85);
@@ -3747,7 +3743,9 @@ video::-webkit-media-controls-enclosure {
   line-height: 1.6;
   letter-spacing: 0.02em;
 }
- 
+
+
+
 @media (max-width: 1100px) {
    /* Ändert das Elternelement NUR auf Handys zu Flexbox */
   .lucent-hero-content {
