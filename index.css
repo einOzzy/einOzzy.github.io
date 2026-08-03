@@ -195,20 +195,23 @@
 
 /* Der Container gibt die Breite und das Seitenverhältnis vor */
 .responsive-youtube-player {
+  position: relative; /* WICHTIG: Damit das iframe darin absolut positioniert werden kann */
   width: 100%; 
-  max-width: 800px; /* Optional: Verhindert, dass das Video auf großen Monitoren riesig wird */
-  aspect-ratio: 16 / 9; /* Zwingt den Container immer in das Standard-Videoformat */
-  margin: 20px auto; /* Zentriert den Player auf der Seite und gibt ihm etwas Abstand */
-  
-  /* Optional für die Optik: */
+  max-width: 800px; 
+  aspect-ratio: 16 / 9; /* Zwingt den Container in das 16:9 Format */
+  margin: 20px auto; 
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   border-radius: 8px;
-  overflow: hidden; /* Sorgt dafür, dass die runden Ecken auch für das iframe gelten */
+  overflow: hidden; 
 }
 
-/* Das Iframe füllt den Container exakt aus */
+/* Das Iframe wird gezwungen, den Container exakt auszufüllen */
 .responsive-youtube-player iframe {
-  width: 100%;
-  height: 100%;
-  display: block; /* Entfernt kleine unsichtbare Abstände unter dem iframe */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important; /* !important überschreibt die störenden TeleportHQ-Standards */
+  height: 100% !important;
+  border: 0;
+  display: block;
 }
