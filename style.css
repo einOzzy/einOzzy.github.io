@@ -88,7 +88,15 @@
   --dl-layout-radius-buttonradius: 24px;
   --dl-layout-space-oneandhalfunits: 24px;
 }
- 
+
+
+/* Hides native browser video controls globally (safe to keep for all) */
+video::-webkit-media-controls,
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+
 .button {
   color: var(--dl-color-theme-neutral-dark);
   display: inline-block;
@@ -2106,7 +2114,10 @@
   font-family: var(--font-family-heading);
 }
  
-
+/* ONLY locks down iframes inside a wrapper with the 'is-background' class */
+.is-background iframe {
+  pointer-events: none !important;
+}
  
 .tab-panel {
   display: none;
