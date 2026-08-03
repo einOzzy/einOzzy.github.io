@@ -188,7 +188,7 @@ body {
 /* 2. Write the container query */
 @container (width > 150px) {
     .player-info h3 { 
-        font-size: 12px;
+        font-size: 8px;
     }
 }
 

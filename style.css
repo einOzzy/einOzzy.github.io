@@ -1794,7 +1794,7 @@ video::-webkit-media-controls-enclosure {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1; /* Über dem Video (0), unter dem Content (2) */
+  z-index: -1; /* Über dem Video (0), unter dem Content (2) */
     /* background: linear-gradient(90deg, var(--color-surface) 30%, transparent 100%),var(--color-scrim); */
   background: linear-gradient(90deg, #050b18f6 20%, #050b18ec 30%, #050b189c 60%, transparent 100%),#d5e6f43b;
 }

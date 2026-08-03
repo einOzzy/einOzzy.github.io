@@ -83,7 +83,7 @@
           <!--Navigation component-->
           <div class="navigation-container1">
             <nav class="navigation-wrapper">
-              <a href="index.html">
+              <a href="index">
                 <div
                   class="navigation-thq-navigation-container-elm navigation-container"
                 >
@@ -102,9 +102,9 @@
                     </span>
                   </div>
                   <div class="navigation-desktop-menu">
-                    <div class="lucent-nav-link"><a href="./index.html">Home</a></div>
-                    <div class="lucent-nav-link"><a href="./roster.html">Roster</a></div>
-                    <div class="lucent-nav-link"><a href="./apply-page.html">Apply</a></div>
+                    <div class="lucent-nav-link"><a href="./index">Home</a></div>
+                    <div class="lucent-nav-link"><a href="./roster">Roster</a></div>
+                    <div class="lucent-nav-link"><a href="./apply-page">Apply</a></div>
                     <div class="navigation-cta btn-sm btn-primary btn">
                       <span><a href="https://discord.gg/RXkEXbcdTb" target="_blank">Join the Discord</a></span>
                     </div>
@@ -136,7 +136,7 @@
             </nav>
             <div id="mobile-overlay" class="navigation-mobile-overlay">
               <div class="navigation-mobile-header">
-                <a href="index.html">
+                <a href="index">
                   <div aria-label="Team Lucent Home" class="navigation-brand">
                     <span class="navigation-brand-name section-title">
                       Team Lucent
@@ -170,20 +170,20 @@
               <div class="navigation-mobile-content">
             <ul class="navigation-mobile-links">
               <li>
-                <a href="index.html">
+                <a href="index">
                   <div class="navigation-mobile-link">
                     <span>Home</span></div>
                 </a>
               </li>
               <li>
-                <a href="roster.html">
+                <a href="roster">
                   <div class="navigation-mobile-link">
                         <span>Roster</span>
                       </div>
                     </a>
                   </li>
               <li>
-                <a href="apply-page.html">
+                <a href="apply-page">
                   <div class="navigation-mobile-link">
                     <span>Apply</span>
                   </div>
@@ -301,6 +301,7 @@
                     allow="autoplay; encrypted-media" 
                     allowfullscreen>
                   </iframe> -->
+                 <!-- ENDE YOUTUBE HINTERGRUND -->
                     <video
                       src="content/Altered Reality   Team Lucent Release (compressed v2).mp4"
                       loop
@@ -312,7 +313,18 @@
                   </video>
 
                 </div>
-                <!-- ENDE YOUTUBE HINTERGRUND -->
+
+                <script>
+                  const video = document.querySelector('.hero-video');
+
+                  video.addEventListener('loadedmetadata', () => {
+                      video.currentTime = 9.5; // Start at 5 seconds 6
+                  });
+
+                  video.addEventListener('canplay', () => {
+                      video.classList.add('loaded');
+                  });
+                </script>
 
           <div class="tryouts-hero-overlay"></div>
           <div class="hero-container">
@@ -811,17 +823,17 @@ Minimum 14 years of age, and all regions are welcome. Just be aware that high pi
                         <li></li>
                         <li></li>
                         <li>
-                          <a href="apply-page.html">
+                          <a href="apply-page">
                             <div class="footer-link"><span>Apply</span></div>
                           </a>
                         </li>
                         <li>
-                          <a href="index.html">
+                          <a href="index">
                             <div class="footer-link"><span>Home</span></div>
                           </a>
                         </li>
                         <li>
-                          <a href="roster.html">
+                          <a href="roster">
                             <div class="footer-link"><span>Roster</span></div>
                           </a>
                         </li>
