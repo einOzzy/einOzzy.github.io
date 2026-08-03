@@ -1764,12 +1764,6 @@ video::-webkit-media-controls-enclosure {
   animation: fade-in-video 1s ease-in 3s forwards; /* Waits 1.5s, then fades in over 1s */
 
 
-/* 2. The animation keyframes to make the fade happen */
-@keyframes fade-in-video {
-  to {
-    opacity: 1;
-  }
-}
   /* Erzwingt das 16:9 Format passend zur Bildschirmgröße */
   width: 100vw;
   height: 56.25vw; 
