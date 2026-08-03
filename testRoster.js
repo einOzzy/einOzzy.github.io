@@ -1,4 +1,4 @@
-const DATA_URL = 'https://raw.githubusercontent.com/einOzzy/team-swift-data/main/roster.json';
+const DATA_URL = 'https://raw.githubusercontent.com/einOzzy/team-lucent-data/main/roster.json';
 const rosterContainer = document.getElementById('rosterContainer');
 let allPlayers = [];
 

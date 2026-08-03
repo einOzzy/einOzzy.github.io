@@ -1,0 +1,88 @@
+{
+  "team": "Team Lucent",
+  "roster": [
+    {
+      "name": "Lucent Micro",
+      "role": "Founder",
+      "category": "owner",
+      "imagePath": "https://raw.githubusercontent.com/einOzzy/team-swift-data/main/images/lucent_micro.png",
+      "countryCode": "SY",
+      "socials": [
+        { "platform": "Behance", "url": "http://www.behance.net/microwaveelevator" },
+        { "platform": "X", "url": "https://share.google/EQDyO3lyEJDX4zN2k" }
+      ]
+    },
+    {
+      "name": "Lucent Lyoszn",
+      "role": "Founder",
+      "category": "owner",
+      "imagePath": "https://raw.githubusercontent.com/einOzzy/team-swift-data/main/images/lucent_lyoszn.png",
+      "countryCode": "GB",
+      "socials": [
+        { "platform": "TikTok", "url": "https://www.tiktok.com/@lyoszn?lang=en&is_from_webapp=1&sender_device=mobile&sender_web_id=7601673116964357640" }
+      ]
+    },
+    {
+      "name": "Lucent Ozzy",
+      "role": "Lead Developer",
+      "category": "management",
+      "imagePath": "https://raw.githubusercontent.com/einOzzy/team-swift-data/main/images/lucent_ozzy.png",
+      "countryCode": "DE",
+      "socials": [
+        { "platform": "Twitter", "url": "https://twitter.com/einOzzy" },
+        { "platform": "YouTube", "url": "https://youtube.com/einOzzy" },
+        { "platform": "Twitch", "url": "https://twitch.tv/einOzzy" },
+        { "platform": "Discord", "url": "https://discordapp.com/users/einOzzy" },
+        { "platform": "Instagram", "url": "https://www.instagram.com/einOzzy" }
+      ]
+    },
+    {
+      "name": "Lucent Yenqq",
+      "role": "Lead Social Media Manager",
+      "category": "management",
+      "imagePath": "https://raw.githubusercontent.com/einOzzy/team-swift-data/main/images/lucent_yenqq.png",
+      "countryCode": "AU",
+      "socials": [
+        { "platform": "TikTok", "url": "https://www.tiktok.com/@yenqqify?lang=en&is_from_webapp=1&sender_device=mobile&sender_web_id=7601673116964357640" }
+      ]
+    },
+    {
+      "name": "Lucent Crtii",
+      "role": "Content Creator",
+      "category": "content",
+      "imagePath": "https://raw.githubusercontent.com/einOzzy/team-swift-data/main/images/lucent_crtii.png",
+      "countryCode": "AU",
+      "socials": []
+    },
+    {
+      "name": "Lucent Goober",
+      "role": "Academy Freestyler",
+      "category": "players",
+      "imagePath": "https://raw.githubusercontent.com/einOzzy/team-swift-data/main/images/lucent_goober.png",
+      "countryCode": "US",
+      "socials": [
+        { "platform": "TikTok", "url": "https://www.tiktok.com/@gooob_r?lang=en&is_from_webapp=1&sender_device=mobile&sender_web_id=7601673116964357640" }
+      ]
+    },
+    {
+      "name": "Lucent ZF",
+      "role": "Designer",
+      "category": "creatives",
+      "imagePath": "https://raw.githubusercontent.com/einOzzy/team-swift-data/main/images/lucent_zf.png",
+      "countryCode": "FR",
+      "socials": [
+        { "platform": "TikTok", "url": "https://www.tiktok.com/@zfqw23?lang=en&is_from_webapp=1&sender_device=mobile&sender_web_id=7601673116964357640" }
+      ]
+    },
+    {
+      "name": "Lucent Othy",
+      "role": "Academy No Flipper",
+      "category": "players",
+      "imagePath": "https://raw.githubusercontent.com/einOzzy/team-swift-data/main/images/lucent_othy.png",
+      "countryCode": "",
+      "socials": [
+        { "platform": "TikTok", "url": "https://www.tiktok.com/@othyds?lang=en&is_from_webapp=1&sender_device=mobile&sender_web_id=7601673116964357640" }
+      ]
+    }
+  ]
+}
