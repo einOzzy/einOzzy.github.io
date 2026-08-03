@@ -2233,6 +2233,8 @@
 .video-player-wrapper  video {
   width: 100%;
   height: 100%;
+  border: none;
+  pointer-events: none; /* Prevents clicks, hovers, titles, and pop-up controls completely */
 }
 
 .video-player-wrapper-mainpage  video {
