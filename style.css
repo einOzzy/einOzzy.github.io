@@ -1891,11 +1891,6 @@ position: absolute;
   }
 }
 
-#intro-overlay {
-  z-index: 10; /* Keeps the MP4 on top */
-  object-fit: cover;
-  transition: opacity 0.8s ease-in-out; /* The fade transition */
-}
 
 /* Class added by JavaScript to trigger the fade */
 .fade-out {
@@ -2311,6 +2306,8 @@ position: absolute;
   display: block !important;
   transform: scale(100%);
 }
+
+
  
 .faq-accordion {
   gap: var(--spacing-md);
