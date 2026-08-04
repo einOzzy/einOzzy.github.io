@@ -1740,7 +1740,7 @@ video::-webkit-media-controls-enclosure {
   height: 100%;
   z-index: 0; /* Das Video bleibt im Hintergrund */
   overflow: hidden;
-  filter: brightness(0.3) blur(5px);
+  filter: brightness(0.5) blur(3px);
   pointer-events: none; /* WICHTIG: Verhindert, dass Nutzer das Video versehentlich anklicken oder pausieren */
 }
 
