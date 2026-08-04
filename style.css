@@ -1858,11 +1858,10 @@ position: absolute;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  z-index: 10;
+  opacity: 1; /* Changed from 0 so the video is actually visible */
+  z-index: 1; /* Lowered so it sits behind the intro video */
   object-fit: cover;
 }
-
 
 #intro-overlay {
   position: absolute;
@@ -1871,7 +1870,9 @@ position: absolute;
   width: 100%;
   height: 100%;
   opacity: 1;
+  z-index: 10; /* Keeps the MP4 on top */
   object-fit: cover;
+  transition: opacity 0.8s ease-in-out;
 }
 
 #intro-overlay {
