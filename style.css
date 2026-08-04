@@ -1842,12 +1842,14 @@ position: absolute;
 } */
 
 .seamless-container {
-  position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
-  aspect-ratio: 16/9;
-  background-color: #000; /* Prevents white flashes during loading */
-  border-radius: var(--border-radius-md); /* Matches your existing styling */
-  overflow: hidden;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  object-fit: cover;
+  opacity: 1;
 }
 
 #youtube-player, 
