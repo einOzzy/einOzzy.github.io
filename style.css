@@ -1852,14 +1852,14 @@ position: absolute;
   opacity: 1;
 }
 
+/* Ensures the videos stack correctly */
 #youtube-player {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 1; /* Changed from 0 so the video is actually visible */
-  z-index: 1; /* Lowered so it sits behind the intro video */
+  z-index: 1; /* Sits behind the intro video */
   object-fit: cover;
 }
 
@@ -1869,10 +1869,26 @@ position: absolute;
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 1;
   z-index: 10; /* Keeps the MP4 on top */
   object-fit: cover;
-  transition: opacity 0.8s ease-in-out;
+  pointer-events: none; /* Prevents interaction with the MP4 overlay */
+}
+
+/* The animation that replaces your JavaScript timeout */
+.css-fade-out {
+  /* Waits 5.2s, animates for 0.8s, and stays hidden (forwards) */
+  animation: videoFadeOut 0.8s ease-in-out 5.2s forwards;
+}
+
+/* Keyframes for the fade out */
+@keyframes videoFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden; /* Ensures it doesn't interfere after fading out */
+  }
 }
 
 #intro-overlay {

@@ -293,66 +293,22 @@
           </div>
         </div>
         <section class="tryouts-hero">
-          <div class="video-player-wrapper seamless-container">
-            <!-- The YouTube API will replace this div with the iframe -->
-            <div id="youtube-player" class="hero-youtube-background"></div>
-          
-            <!-- Removed 'autoplay' so the JS can sync it perfectly with YouTube -->
-            <video id="intro-overlay" class="hero-youtube-background" muted autoplay playsinline>
-              <source src="content/Altered Reality   Team Lucent Release (compressed v1) - cut - Trim.mp4" type="video/mp4">
-            </video>
-          </div> <!-- ADD THIS CLOSING DIV HERE -->
-
-          <script>
-            // 1. Load the YouTube Iframe API asynchronously
-                var tag = document.createElement('script');
-                tag.src = "https://www.youtube.com/iframe_api";
-                var firstScriptTag = document.getElementsByTagName('script')[0];
-                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-                var player;
-                var introVideo = document.getElementById('intro-overlay');
-                var transitionTriggered = false;
-
-                // 2. This function executes automatically when the API is loaded
-                function onYouTubeIframeAPIReady() {
-                  player = new YT.Player('youtube-player', {
-                    videoId: 'TIc-a3v8b4Y', // Your Team Lucent Montage ID
-                    playerVars: {
-                      'autoplay': 1,
-                      'controls': 1,
-                      'rel': 0,
-                      'mute': 1, // Must be muted for browsers to allow autoplay
-                      'playsinline': 1,
-                      'start': 5
-                    },
-                    events: {
-                      'onStateChange': onPlayerStateChange
-                    }
-                  });
-                }
-
-                // 3. Listen for the video to actually start playing
-                function onPlayerStateChange(event) {
-                  // YT.PlayerState.PLAYING is equal to 1
-                  if (event.data === YT.PlayerState.PLAYING && !transitionTriggered) {
-                    transitionTriggered = true;
-                    
-                    // Start the overlay MP4 the exact millisecond YouTube starts playing
-                    introVideo.play();
-
-                    // Set a timer to fade out the MP4. 
-                    // If your clip is exactly 6000ms (6 seconds), fade out at 5200ms for a smooth 0.8s crossfade.
-                    setTimeout(() => {
-                      introVideo.classList.add('fade-out');
-                      
-                      // Optional: If you want to unmute the YouTube video after the fade
-                      // player.unMute(); 
-                      
-                    }, 5200); 
-                  }
-                }
-          </script>
+        <div class="video-player-wrapper seamless-container">
+              <!-- Standard YouTube iframe with autoplay, mute, and start time parameters -->
+              <iframe 
+                id="youtube-player" 
+                class="hero-youtube-background" 
+                src="https://www.youtube.com/embed/TIc-a3v8b4Y?autoplay=1&mute=1&controls=1&rel=0&playsinline=1&start=5" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen>
+              </iframe>
+            
+              <!-- MP4 Video overlay with CSS animation -->
+              <video id="intro-overlay" class="hero-youtube-background css-fade-out" muted autoplay playsinline>
+                <source src="content/Altered Reality   Team Lucent Release (compressed v1) - cut - Trim.mp4" type="video/mp4">
+              </video>
+            </div>
 
           <div class="tryouts-hero-overlay"></div>
           <div class="hero-container">
