@@ -294,17 +294,17 @@
         </div>
         <section class="tryouts-hero">
           <div class="video-player-wrapper seamless-container">
-          <!-- The YouTube API will replace this div with the iframe -->
-          <div id="youtube-player"></div>
-        
-        <!-- Your compressed 6-second MP4 -->
-          <video id="intro-overlay" muted playsinline>
-            <source src="content/Altered Reality   Team Lucent Release (compressed v1) - cut - Trim.mp4" type="video/mp4">
-          </video>
-      
+            <!-- The YouTube API will replace this div with the iframe -->
+            <div id="youtube-player"></div>
+          
+            <!-- Your compressed 6-second MP4 -->
+            <video id="intro-overlay" muted playsinline>
+              <source src="content/Altered Reality   Team Lucent Release (compressed v1) - cut - Trim.mp4" type="video/mp4">
+            </video>
+          </div> <!-- ADD THIS CLOSING DIV HERE -->
 
-            <script>
-                // 1. Load the YouTube Iframe API asynchronously
+          <script>
+            // 1. Load the YouTube Iframe API asynchronously
                 var tag = document.createElement('script');
                 tag.src = "https://www.youtube.com/iframe_api";
                 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -351,7 +351,8 @@
                     }, 5200); 
                   }
                 }
-            </script>
+          </script>
+
           <div class="tryouts-hero-overlay"></div>
           <div class="hero-container">
             <div class="hero-content-block">
