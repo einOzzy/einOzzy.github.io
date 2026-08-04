@@ -1760,6 +1760,7 @@ overflow: hidden;
   height: 56.25vw; 
   min-height: 100vh;
   min-width: 177.77vh;
+   object-fit: cover;
 } 
 
 /* .tryouts-hero {
