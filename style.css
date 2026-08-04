@@ -1740,7 +1740,6 @@ video::-webkit-media-controls-enclosure {
   height: 100%;
   z-index: 0; /* Das Video bleibt im Hintergrund */
   overflow: hidden;
-  object-fit: cover;
   pointer-events: none; /* WICHTIG: Verhindert, dass Nutzer das Video versehentlich anklicken oder pausieren */
 }
 
@@ -1752,16 +1751,15 @@ video::-webkit-media-controls-enclosure {
   transform: translate(-50%, -50%);
   /* 1. Locks down ONLY your hero background video and adds a delayed fade-in */
   pointer-events: none !important;
-  opacity: 1; /* Starts completely invisible */
-  /*animation: fade-in-video 1s ease-in 5s forwards;  Waits 1.5s, then fades in over 1s */
-z-index: -1;
-overflow: hidden;
+  opacity: 0; /* Starts completely invisible */
+  animation: fade-in-video 1s ease-in 3s forwards; /* Waits 1.5s, then fades in over 1s */
+
+
   /* Erzwingt das 16:9 Format passend zur Bildschirmgröße */
   width: 100vw;
   height: 56.25vw; 
   min-height: 100vh;
   min-width: 177.77vh;
-   object-fit: cover;
 } 
 
 /* .tryouts-hero {
