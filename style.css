@@ -1840,7 +1840,37 @@ position: absolute;
   gap: var(--spacing-md);
   display: flex;
 } */
- 
+
+.seamless-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-color: #000; /* Prevents white flashes during loading */
+  border-radius: var(--border-radius-md); /* Matches your existing styling */
+  overflow: hidden;
+}
+
+#youtube-player, 
+#intro-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#intro-overlay {
+  z-index: 10; /* Keeps the MP4 on top */
+  object-fit: cover;
+  transition: opacity 0.8s ease-in-out; /* The fade transition */
+}
+
+/* Class added by JavaScript to trigger the fade */
+.fade-out {
+  opacity: 0;
+  pointer-events: none; /* Allows clicks to pass through to the YT player */
+}
+
 .tryouts-hero {
   display: flex;
   overflow: hidden;

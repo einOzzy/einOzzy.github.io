@@ -293,26 +293,64 @@
           </div>
         </div>
         <section class="tryouts-hero">
-         <video
-            src="content/Altered Reality   Team Lucent Release (compressed v3).mp4"
-            loop
-            muted
-            poster="content/Altered Reality   Team Lucent Release (compressed v1) - cut - Trim.mp4"
-            autoplay
-            playsinline
-            class="hero-video">
-        </video>
+          <div class="video-player-wrapper seamless-container">
+          <!-- The YouTube API will replace this div with the iframe -->
+          <div id="youtube-player"></div>
+        
+        <!-- Your compressed 6-second MP4 -->
+          <video id="intro-overlay" muted playsinline>
+            <source src="content/Altered Reality   Team Lucent Release (compressed v1) - cut - Trim.mp4" type="video/mp4">
+          </video>
+      
 
             <script>
-            const video = document.querySelector('.hero-video');
+                // 1. Load the YouTube Iframe API asynchronously
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/iframe_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-            video.addEventListener('loadedmetadata', () => {
-                video.currentTime = 9.5; // Start at 5 seconds 6
-            });
+                var player;
+                var introVideo = document.getElementById('intro-overlay');
+                var transitionTriggered = false;
 
-            video.addEventListener('canplay', () => {
-                video.classList.add('loaded');
-            });
+                // 2. This function executes automatically when the API is loaded
+                function onYouTubeIframeAPIReady() {
+                  player = new YT.Player('youtube-player', {
+                    videoId: 'TIc-a3v8b4Y', // Your Team Lucent Montage ID
+                    playerVars: {
+                      'autoplay': 1,
+                      'controls': 1,
+                      'rel': 0,
+                      'mute': 1, // Must be muted for browsers to allow autoplay
+                      'playsinline': 1
+                    },
+                    events: {
+                      'onStateChange': onPlayerStateChange
+                    }
+                  });
+                }
+
+                // 3. Listen for the video to actually start playing
+                function onPlayerStateChange(event) {
+                  // YT.PlayerState.PLAYING is equal to 1
+                  if (event.data === YT.PlayerState.PLAYING && !transitionTriggered) {
+                    transitionTriggered = true;
+                    
+                    // Start the overlay MP4 the exact millisecond YouTube starts playing
+                    introVideo.play();
+
+                    // Set a timer to fade out the MP4. 
+                    // If your clip is exactly 6000ms (6 seconds), fade out at 5200ms for a smooth 0.8s crossfade.
+                    setTimeout(() => {
+                      introVideo.classList.add('fade-out');
+                      
+                      // Optional: If you want to unmute the YouTube video after the fade
+                      // player.unMute(); 
+                      
+                    }, 5200); 
+                  }
+                }
             </script>
           <div class="tryouts-hero-overlay"></div>
           <div class="hero-container">
